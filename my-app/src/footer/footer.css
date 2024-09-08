@@ -1,0 +1,135 @@
+.footer{
+   width: 100%;
+   height: fit-content;
+   box-sizing: border-box;
+   background-color: rgb(19, 20, 36) !important  ;
+   color: aliceblue;
+   padding: 10px 20px;
+}
+.footer_logo{
+    width: 150px;
+    height: 100px;
+}
+.footer--logo{
+    color: aliceblue;
+  
+    display: flex;
+    justify-content: center;
+}
+
+/*-------------------------------------------*/
+.footer--list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.footer--list > ul{
+    margin: 5px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-right: 200px;
+   
+
+}
+.footer--list > ul > a{
+  padding: 10px 5px;
+  font-size: medium;
+}
+/*--------------------------------------*/
+.newsletter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 25px 0;
+}
+.newsletter > input{
+    height: 40px;
+    width: 50%;
+    padding: 0 15px;
+    font-size: medium;
+    font-weight: 900;
+    margin: 5px;
+    border-radius: 7px;
+}
+.btn-newsletter{
+    height: 40px;
+    width: fit-content;
+    font-size: medium;
+    font-weight: 900;
+    background-color: blueviolet;
+    margin: 5px;
+    padding: 0 5px;
+    border-radius: 7px;
+}
+.chakra--div{
+    width:100%;
+    margin: 10px;
+    
+}
+.chakra{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    margin: 15px;
+}
+@media (max-width: 700px) {
+
+    .footer--list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer--list > ul{
+    margin: 5px;
+    padding: 0;
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+   
+
+}
+.footer--list > ul > a{
+  padding: 10px 5px;
+  font-size: medium;
+}
+.newsletter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 25px 0;
+}
+.newsletter > input{
+    height: 30px;
+    width: 70%;
+    padding: 0 15px;
+    font-size: medium;
+    font-weight: 900;
+    margin: 5px;
+    border: none;
+    border-radius: 7px;
+}
+.btn-newsletter{
+    height: 30px;
+    width: fit-content;
+    font-size: medium;
+    font-weight: 900;
+    background-color: chocolate;
+    margin: 5px;
+    padding: 0 5px;
+    font-size: medium;
+    border: none;
+    font-size: small;
+    border-radius: 7px;
+}
+.newsletter > input {
+    flex-grow: 1;
+}
+}
