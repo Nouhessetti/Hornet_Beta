@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from './footer/footer';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Categories from './Categories/categories';
 import Navbar from './Navbar/Navbar';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,6 +15,7 @@ root.render(
     <Navbar />
     <Routes>
       <Route path='/' element={<App />} />
+      <Route path="/categories/:id" element={<Categories />} />
     </Routes>
     <Footer />
     </BrowserRouter>

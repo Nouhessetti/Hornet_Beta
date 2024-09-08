@@ -4,6 +4,7 @@ import './Dropdown.css'
 import { FaUserPlus, FaAtom , FaLaptopCode} from "react-icons/fa";
 import { FaEarthAfrica } from "react-icons/fa6";
 import { TbMathFunction } from "react-icons/tb";
+import { Link } from "react-router-dom";
 export default function Dropdown(props){
  const [slide , setSlide] = useState([
     {
@@ -93,7 +94,7 @@ function cheking(id){
 const [onstatepsedo, setOnstate] = useState(0)
      
 function targetpsedo(onstate){
-    console.log(onstate)
+    
    for(let i = 0; i < onstate.length; i++){
     const onupdate = onstate[i]
     if(onupdate.on === true){
@@ -104,12 +105,12 @@ function targetpsedo(onstate){
 }
 
 const side_title = slide.map((item , id)=>
-    <div  className="item" key={id}
+   <Link to={`/categories/${item.name}`}> <div  className="item" key={id}
      style={{ background: slide[id].on ? slide[id].color : 'rgba(36, 72, 93, 0.458)'}}
      onMouseEnter={()=>
         cheking(id)
      }  
-><div className="div_item_icones">{item.icone}</div> <div>{item.name}</div></div>
+><div className="div_item_icones">{item.icone}</div> <div>{item.name}</div></div></Link>
 )
 
 
