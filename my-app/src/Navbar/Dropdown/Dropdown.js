@@ -1,18 +1,92 @@
 import  { useState } from "react";
 import './Dropdown.css'
-
+import { Link } from "react-router-dom";
 import { FaUserPlus, FaAtom , FaLaptopCode} from "react-icons/fa";
 import { FaEarthAfrica } from "react-icons/fa6";
 import { TbMathFunction } from "react-icons/tb";
-import { Link } from "react-router-dom";
+
 export default function Dropdown(props){
+   const Math=[
+        {
+            id:0,
+            name:'Suites Numériques et Fonctions',
+        },
+        {
+            id:1,
+            name:'Généralités et Arithmétique dans Z ',
+        },
+        {
+            id:2,
+            name:'Structures,Polynômes et Fractions Rationnelles ',
+        },
+        {
+            id:3,
+            name:'Intégration ',
+        }        
+    ]
+    const Physics=[
+        {
+            id:0,
+            name:'Suites Numériques et Fonctions',
+        },
+        {
+            id:1,
+            name:'Généralités et Arithmétique dans Z ',
+        },
+        {
+            id:2,
+            name:'Structures,Polynômes et Fractions Rationnelles ',
+        },
+        {
+            id:3,
+            name:'Intégration ',
+        }        
+    ]
+    const Geo=[
+        {
+            id:0,
+            name:'Suites Numériques et Fonctions',
+        },
+        {
+            id:1,
+            name:'Généralités et Arithmétique dans Z ',
+        },
+        {
+            id:2,
+            name:'Structures,Polynômes et Fractions Rationnelles ',
+        },
+        {
+            id:3,
+            name:'Intégration ',
+        }        
+    ]
+    const Info=[
+        {
+            id:0,
+            name:'Suites Numériques et Fonctions',
+        },
+        {
+            id:1,
+            name:'Généralités et Arithmétique dans Z ',
+        },
+        {
+            id:2,
+            name:'Structures,Polynômes et Fractions Rationnelles ',
+        },
+        {
+            id:3,
+            name:'Intégration ',
+        }        
+    ]
+    
  const [slide , setSlide] = useState([
     {
         id:0,
         on : true,
         color : "#626ee3",
         name : 'Mathematiques',
-        icone: <TbMathFunction  className="main_side_icones" />
+        icone: <TbMathFunction  className="main_side_icones" />,
+       
        
     },
     {
@@ -105,7 +179,7 @@ function targetpsedo(onstate){
 }
 
 const side_title = slide.map((item , id)=>
-   <Link to={`/categories/${item.name}`}> <div  className="item" key={id}
+ <Link className="drop_links" key={id} to={`/categories/${item.id}`}> <div  className="item item_container" key={id}
      style={{ background: slide[id].on ? slide[id].color : 'rgba(36, 72, 93, 0.458)'}}
      onMouseEnter={()=>
         cheking(id)
@@ -128,39 +202,42 @@ const side_title = slide.map((item , id)=>
 
             </div>
             <div className="psedo_side psedoo"   style={{display:onstatepsedo === 0? 'flex' : 'none'}}  >
-                <h1>Suites Numériques et Fonctions</h1>
-                <h1> Généralités et Arithmétique dans Z  </h1>
-                <h1> Structures,Polynômes et Fractions Rationnelles </h1>
-                <h1>Intégration</h1>
-                <h1>Formule de Taylor,Développement Limité et Applications</h1>
-                <h1>Espaces Vectoriels, Matrices et Déterminants </h1>
-                <h1> PROBABILITES et STATISTIQUES </h1>
+                <>
+                {Math.map((item,id)=>
+                <Link className="drop_links" key={id} to={`/categories/mathematiques/${item.name}`}><h1>{item.name}</h1></Link>
+                )
+
+                }
+                </>
              </div>
              <div  className="psedo_side1 psedoo"  style={{display:onstatepsedo ===1 ? 'flex' : 'none'}} >
-                <h1>Mécanique 1</h1>
-                <h1>Thermodynamique</h1>
-                <h1>physique3</h1>
-                <h1>physique4</h1>
-                <h1>physique5</h1>
+             <>
+                {Physics.map((item,id)=>
+                <Link className="drop_links" key={id} to={`/categories/mathematiques/${item.name}`}><h1>{item.name}</h1></Link>
+                )
+
+                }
+                </>
                 
              </div>
              <div className="psedo_side2 psedoo"  style={{display:onstatepsedo === 2 ? 'flex' : 'none'}} >
-                <h1>Mathimatics1</h1>
-                <h1>Mathimatics2</h1>
-                <h1>Mathimatics3</h1>
-                <h1>Mathimatics4</h1>
-                <h1>Mathimatics5</h1>
+             <>
+                {Geo.map((item,id)=>
+                <Link className="drop_links" key={id} to={`/categories/mathematiques/${item.name}`}><h1>{item.name}</h1></Link>
+                )
+
+                }
+                </>
                 
              </div>
              <div className="psedo_side3  psedoo"  style={{display:onstatepsedo === 3 ? 'flex' : 'none'}} >
-                <h1>Introduction à l’informatique</h1>
-                <h1>Algorithmique I</h1>
-                <h1>PROGRAMMATION I</h1>
-                <h1>ALGORITHMIQUE II</h1>
-                <h1>TECHNOLOGIE DU WEB</h1>
-                <h1>BASES DE DONNEES</h1>
-                <h1>COMPILATION</h1>
-                <h1>RESEAUX</h1>
+             <>
+                {Info.map((item,id)=>
+                <Link className="drop_links" key={id} to={`/categories/mathematiques/${item.name}`}><h1>{item.name}</h1></Link>
+                )
+
+                }
+                </>
              
                 
              </div>

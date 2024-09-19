@@ -101,9 +101,9 @@ function chekPhoneTeam(){
                 </div>
              
                    <a>Products</a>
-                  <a>Blog</a>
+                    <a>Blog</a>
                     <a>Contact</a>
-             
+                    <Link  to='/kata' className='kata'><a>Kata</a> </Link>
                 
                 
             </div>

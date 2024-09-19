@@ -1,0 +1,10 @@
+.sounav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: medium;
+}
+.sounav>*{
+    margin-right: 10px;
+}

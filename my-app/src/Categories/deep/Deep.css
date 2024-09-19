@@ -1,0 +1,41 @@
+.deep-underst-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item-list {
+    display: flex;
+    width: 80%;
+  
+    margin: 10px auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing between items as needed */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .item {
+    border: 1px solid #ddd;
+ 
+    overflow: hidden;
+    width: 350px; /* Adjust width as needed */
+    height: 120px;
+    max-width: 350px;
+    
+    padding: 10px;
+  }
+  
+  .item-image {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0;
+  }
+  
+  .item-title {
+    width: 60%;
+    font-size: 16px;
+    color: #333;
+  }
+  
